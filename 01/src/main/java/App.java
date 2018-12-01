@@ -29,7 +29,7 @@ public class App {
     public int findRepeat(String data) {
         String[] array = data.split("\n", -1);
         int x = 0;
-        List<Integer> a = new ArrayList<Integer>();
+        Set<Integer> a = new HashSet<Integer>();
         for (int i = 0; i < array.length; i++) {
             x = this.calcValue(x, array[i]);
             if (a.contains(new Integer(x))) return x;
