@@ -3,6 +3,7 @@ public class Coord {
     int startY;
     int width;
     int height;
+    String id;
 
     public Coord(String input) {
         int i = input.indexOf("@");
@@ -13,6 +14,7 @@ public class Coord {
         startY = Integer.parseInt(input.substring(z+1, y).trim());
         width = Integer.parseInt(input.substring(y+1, x).trim());
         height = Integer.parseInt(input.substring(x+1).trim());
+        id = input.substring(1, i).trim();
     }
 
     public int getStartX() {
@@ -29,5 +31,9 @@ public class Coord {
 
     public int getHeight() {
         return height;
+    }
+
+    public String getId() {
+        return id;
     }
 }
