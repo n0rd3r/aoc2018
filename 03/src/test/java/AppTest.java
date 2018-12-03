@@ -10,4 +10,23 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+    @Test
+    public void testParseString() {
+        Coord c = new Coord("#1 @ 1,3: 4x5");
+        assertEquals(1, c.getStartX());
+        assertEquals(3, c.getStartY());
+        assertEquals(4, c.getWidth());
+        assertEquals(5, c.getHeight());
+    }
+
+    @Test
+    public void testFillGrid() {
+        Coord c = new Coord("#1 @ 1,3: 4x5");
+        App a = new App();
+        a.fillGrid(c);
+        assertEquals(1, a.grid[1][3]);
+        assertEquals(1, a.grid[4][8]);
+        assertEquals(0, a.grid[5][9]);
+    }
+
 }
