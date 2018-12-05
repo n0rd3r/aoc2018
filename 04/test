@@ -1,0 +1,4 @@
+#!/bin/bash
+javac App.java
+javac AppTest.java
+java AppTest
