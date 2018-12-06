@@ -71,13 +71,13 @@ public class App {
    
    public void loadBorderPatrol() {
        for (int i = 0; i < X; i++) {
-           borderPatrol.add(Integer.valueOf(grid[i][0]));
-           borderPatrol.add(Integer.valueOf(grid[i][Y-1]));
+           borderPatrol.add((grid[i][0]));
+           borderPatrol.add((grid[i][Y-1]));
 
        }
        for (int i = 0; i < Y; i++) {
-           borderPatrol.add(Integer.valueOf(grid[0][i]));
-           borderPatrol.add(Integer.valueOf(grid[X-1][i]));
+           borderPatrol.add((grid[0][i]));
+           borderPatrol.add((grid[X-1][i]));
        }
    }
    
