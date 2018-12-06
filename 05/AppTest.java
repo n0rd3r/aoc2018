@@ -8,5 +8,9 @@ public class AppTest {
 
         System.out.println(a.parseString("abcCde"));
         System.out.println("abde");
+
+        System.out.println(a.removeChar('A', "abcdefgABCDEFG"));
+        System.out.println("bcdefgBCDEFG");
+
    }
 }
